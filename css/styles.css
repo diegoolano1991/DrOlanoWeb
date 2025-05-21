@@ -1,11 +1,15 @@
 :root {
-    --rojo-medicina: #800000;
-    --marfil-vital: #f7f2e4;
-    --dorado-sereno: #c9a96b;
-    --amarillo-armonico: #f5dc5d;
-    --gris-humano: #3b3b3b;
-    --beige-natural: #ebe1d1;
-    --luz-vital: #f7f2e4;
+  /* Paleta de colores */
+  --rojo-medicina:     #800000;
+  --marfil-vital:      #f7f2e4;
+  --dorado-sereno:     #c9a96b;
+  --amarillo-armonico: #f5dc5d;
+  --gris-humano:       #3b3b3b;
+  --beige-natural:     #ebe1d1;
+
+  /* Fuentes */
+  --font-heading: 'Playfair Display', serif;
+  --font-body:    'Lora', serif;
 }
 
 * {
@@ -16,10 +20,17 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--font-body);
     color: var(--gris-humano);
     background: var(--marfil-vital);
     line-height: 1.5;
+}
+
+/* Titulares */
+h1, h2, h3, .logo a {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  margin: 0 0 1rem;
 }
 
 a {
@@ -47,6 +58,7 @@ header {
   gap: 1.5rem;
 }
 .nav-links a {
+  font-family: var(--font-heading);
   color: var(--luz-vital);
   position: relative;
   padding-bottom: 0.25rem;
@@ -277,6 +289,7 @@ footer .copyright {
   font-size: 0.85rem;
   text-align: center;
 }
+
 
 /* Mobile-first: reorganizar en pantallas pequeñas */
 @media (max-width: 768px) {
