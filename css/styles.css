@@ -1,9 +1,9 @@
 :root {
   /* Paleta de colores */
-  --rojo-medicina:     #800000;
+  --rojo-medicina:     rgb(128, 0, 0);
   --marfil-vital:      #f7f2e4;
-  --dorado-sereno:     #c9a96b;
-  --amarillo-armonico: #f5dc5d;
+  --dorado-sereno:     rgb(201, 169, 107);
+  --amarillo-armonico: rgb(245, 220, 93);
   --gris-humano:       #3b3b3b;
   --beige-natural:     #ebe1d1;
 
@@ -51,7 +51,8 @@ header {
   justify-content: space-between;
 }
 .logo img {
-  height: 2.5rem;
+  height: 3.5rem;
+  color: var(--marfil-vital);
 }
 .nav-links {
   display: flex;
@@ -59,7 +60,8 @@ header {
 }
 .nav-links a {
   font-family: var(--font-heading);
-  color: var(--luz-vital);
+  font-size: 1.2rem;
+  color: var(--marfil-vital);
   position: relative;
   padding-bottom: 0.25rem;
 }
@@ -135,7 +137,7 @@ header {
 }
 .btn-primary {
   background: var(--rojo-medicina);
-  color: var(--luz-vital);
+  color: var(--marfil-vital);
   padding: 0.75rem 1.5rem;
   border-radius: 6px;
   transition: background 0.3s;
@@ -180,7 +182,7 @@ header {
   left: 50%;
   transform: translateX(-50%);
   background: var(--rojo-medicina);
-  color: var(--luz-vital);
+  color: var(--marfil-vital);
   padding: 0.6rem;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -264,7 +266,7 @@ header {
 /* Footer */
 footer {
   background: var(--rojo-medicina);
-  color: var(--luz-vital);
+  color: var(--marfil-vital);
   padding: 2rem;
 }
 .footer-grid {
@@ -273,8 +275,8 @@ footer {
   gap: 2rem;
 }
 .footer-info img {
-  max-width: 120px;
-  margin-bottom: 1rem;
+  max-width: 250px;
+  /* margin-bottom: 1rem; */
 }
 .footer-grid nav ul {
   display: flex;
@@ -288,6 +290,10 @@ footer .copyright {
   margin-top: 1.5rem;
   font-size: 0.85rem;
   text-align: center;
+}
+
+footer .footer-nav {
+  margin-top: 2rem;
 }
 
 
