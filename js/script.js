@@ -37,3 +37,34 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+
+    // ANIMACIÓN PARA MENÚ HAMBURGUESA
+
+    document.addEventListener("DOMContentLoaded", () => {
+      const btnHamburguesa = document.getElementById("btnHamburguesa");
+      const menuLateral = document.getElementById("menuLateral");
+      const overlay = document.getElementById("overlay");
+    
+      btnHamburguesa.addEventListener("click", () => {
+        menuLateral.classList.add("activo");
+        overlay.classList.add("activo");
+        btnHamburguesa.classList.add("oculto");
+      });
+    
+      overlay.addEventListener("click", () => {
+        menuLateral.classList.remove("activo");
+        overlay.classList.remove("activo");
+        btnHamburguesa.classList.remove("oculto");
+      });
+    
+      // Opcional: cerrar menú si se hace clic en un enlace del menú
+      document.querySelectorAll("#menuLateral a").forEach(link => {
+        link.addEventListener("click", () => {
+          menuLateral.classList.remove("activo");
+          overlay.classList.remove("activo");
+          btnHamburguesa.classList.remove("oculto");
+        });
+      });
+    });
+    
+    

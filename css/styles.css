@@ -296,14 +296,184 @@ footer .footer-nav {
   margin-top: 2rem;
 }
 
+/* MENÚ HAMBURGUESA */
 
-/* Mobile-first: reorganizar en pantallas pequeñas */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
+.hamburguesa {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+  position: absolute;
+  right: 1rem;
+  top: 1.6rem;
+  z-index: 999;
+}
+
+.hamburguesa span {
+  width: 50px;
+  height: 5px;
+  background-color: white;
+  display: block;
+  border-radius: 2px;
+}
+
+
+.menu-lateral {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 250px;
+  height: 100%;
+  background: var(--rojo-medicina);
+  color: white;
+  padding: 2rem;
+  transition: right 0.3s ease;
+  z-index: 998;
+}
+
+.menu-lateral ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.menu-lateral a {
+  color: white;
+  font-size: 1.2rem;
+  font-family: var(--font-heading);
+}
+
+.menu-lateral.activo {
+  right: 0;
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  z-index: 997;
+}
+
+.overlay.activo {
+  display: block;
+}
+
+.hamburguesa.oculto {
+  display: none;
+}
+
+
+/* Mostrar menú hamburguesa en pantallas pequeñas */
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
   }
+
+  .hamburguesa {
+    display: flex;
+  }
+
   .cotiza-content {
-    flex-direction: column;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content: center;
+  }
+
+  .cotiza-h2{
+    display: flex;
+    justify-content: center;
+  }
+
+}
+
+
+/* === TABLETS PEQUEÑAS (600px – 767px) === */
+@media (min-width: 600px) {
+  .servicios-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cotiza-content {
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content: center;
+  }
+
+  .testi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cotiza-h2{
+    display: block;
+    /* justify-content: center; */
   }
 }
+
+
+
+
+/* === TABLETS GRANDES Y PORTÁTILES (768px – 1023px) === */
+@media (min-width: 768px) {
+  .nav-links {
+    gap: 2rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .section {
+    padding: 5rem 3rem;
+  }
+}
+
+
+
+
+/* === LAPTOPS MEDIANOS (1024px – 1279px) === */
+@media (min-width: 1024px) {
+  .servicios-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .testi-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+
+
+
+/* === DESKTOPS Y FULL HD (1280px – 1919px) === */
+@media (min-width: 1280px) {
+  body {
+    font-size: 1.05rem;
+  }
+
+  .section {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .nav-links a {
+    font-size: 1.1rem;
+  }
+}
+
+
+
+
+/* === PANTALLAS ULTRA-WIDE (1920px en adelante) === */
+@media (min-width: 1920px) {
+  .section {
+    max-width: 1400px;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
