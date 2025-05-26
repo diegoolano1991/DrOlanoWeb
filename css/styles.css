@@ -13,10 +13,10 @@
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,6 +24,10 @@ body {
     color: var(--gris-humano);
     background: var(--marfil-vital);
     line-height: 1.5;
+}
+
+.container{
+  width: 100%;
 }
 
 /* Titulares */
@@ -378,7 +382,6 @@ footer .footer-nav {
 
   .cotiza-content {
     flex-direction: row;
-    /* align-items: flex-start; */
     justify-content: center;
   }
 
@@ -386,7 +389,6 @@ footer .footer-nav {
     display: flex;
     justify-content: center;
   }
-
 }
 
 
@@ -398,7 +400,6 @@ footer .footer-nav {
 
   .cotiza-content {
     flex-direction: row;
-    /* align-items: flex-start; */
     justify-content: center;
   }
 
@@ -408,11 +409,8 @@ footer .footer-nav {
 
   .cotiza-h2{
     display: block;
-    /* justify-content: center; */
   }
 }
-
-
 
 
 /* === TABLETS GRANDES Y PORTÁTILES (768px – 1023px) === */
@@ -427,10 +425,9 @@ footer .footer-nav {
 
   .section {
     padding: 5rem 3rem;
+    width: 100vw;
   }
 }
-
-
 
 
 /* === LAPTOPS MEDIANOS (1024px – 1279px) === */
@@ -445,8 +442,6 @@ footer .footer-nav {
 }
 
 
-
-
 /* === DESKTOPS Y FULL HD (1280px – 1919px) === */
 @media (min-width: 1280px) {
   body {
@@ -454,15 +449,14 @@ footer .footer-nav {
   }
 
   .section {
-    max-width: 1200px;
+    max-width: 1200px; /* AQUÍ EMPIEZA EL PROBLEMA PARA ADAPTARLO A TOTAL PANTALLA*/
     margin: 0 auto;
   }
-
+  
   .nav-links a {
     font-size: 1.1rem;
   }
 }
-
 
 
 
@@ -471,7 +465,7 @@ footer .footer-nav {
   .section {
     max-width: 1400px;
   }
-
+  
   .hero h1 {
     font-size: 3.5rem;
   }
