@@ -93,17 +93,26 @@ header {
 .section.visible {
   opacity: 1;
   transform: translateY(0);
+  max-width: 100%;
 }
 
 /* Gradientes de fondo por sección */
 .hero {
-  background: linear-gradient(
-    to bottom,
-    var(--beige-natural),
-    var(--marfil-vital)
-  );
+  padding: 1.5rem;
   text-align: center;
+  background:
+    linear-gradient(to bottom, rgba(235, 225, 209, 0.7), rgba(247, 242, 228, 1));
 }
+
+
+#hero{
+  background-image: url(/img/relajacion.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+
 .lema {
   background: var(--luz-vital);
 }
@@ -391,6 +400,12 @@ footer .footer-nav {
   }
 }
 
+@media (max-width: 599px) {
+  .hero h1{
+    font-size: 2.2rem;
+  }
+}
+
 
 /* === TABLETS PEQUEÑAS (600px – 767px) === */
 @media (min-width: 600px) {
@@ -449,7 +464,7 @@ footer .footer-nav {
   }
 
   .section {
-    max-width: 1200px; /* AQUÍ EMPIEZA EL PROBLEMA PARA ADAPTARLO A TOTAL PANTALLA*/
+    /* max-width: 1200px;  */
     margin: 0 auto;
   }
   
@@ -463,7 +478,7 @@ footer .footer-nav {
 /* === PANTALLAS ULTRA-WIDE (1920px en adelante) === */
 @media (min-width: 1920px) {
   .section {
-    max-width: 1400px;
+    /* max-width: 1400px; */
   }
   
   .hero h1 {
