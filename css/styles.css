@@ -106,7 +106,7 @@ header {
 
 
 #hero{
-  background-image: url(/img/relajacion.jpg);
+  background-image: url(/img/relajacion1.jpg);
   background-repeat: no-repeat;
   background-position: center;
   /* background-attachment: fixed; */
@@ -114,7 +114,7 @@ header {
 }
 
 .lema {
-  background: var(--luz-vital);
+  background: linear-gradient(to bottom, rgba(201, 170, 107, 0.158));
 }
 .servicios {
   background: var(--marfil-vital);
@@ -158,6 +158,16 @@ header {
 .btn-primary:hover {
   background: var(--dorado-sereno);
   color: var(--gris-humano);
+}
+
+/* Lema */
+.lema{
+  text-align: center;
+  font-size: larger;
+}
+
+.salto-linea{
+  display: inline;
 }
 
 /* Servicios */
@@ -403,6 +413,30 @@ footer .footer-nav {
 @media (max-width: 599px) {
   .hero h1{
     font-size: 2.2rem;
+  }
+
+  .salto-linea{
+    display: block;
+  }
+
+  .cotiza h2{
+    text-align: center;
+  }
+
+  .servicios h2, .subtitulo{
+    text-align: center;
+  }
+
+  .dolencias h2, p{
+    text-align: center;
+  }
+
+  .testimonios h2{
+    text-align: center;
+  }
+
+  .cotiza-content form label{
+    text-align: center;
   }
 }
 
