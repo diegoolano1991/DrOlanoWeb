@@ -67,4 +67,27 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
     
-    
+    // ---------------PREGUNTAS FRECUENTES-------------
+      document.addEventListener("DOMContentLoaded", () => {
+        const questions = document.querySelectorAll(".faq-question");
+
+        questions.forEach(btn => {
+          btn.addEventListener("click", () => {
+            const isExpanded = btn.getAttribute("aria-expanded") === "true";
+            const answer = btn.nextElementSibling;
+
+            // Primero: cerrar todos los items activos
+            questions.forEach(otherBtn => {
+              otherBtn.setAttribute("aria-expanded", "false");
+              otherBtn.nextElementSibling.style.maxHeight = null;
+            });
+
+            // Si el botón actual estaba cerrado, lo abrimos (porque ya fue cerrado arriba)
+            if (!isExpanded) {
+              btn.setAttribute("aria-expanded", "true");
+              answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+          });
+        });
+      });
+

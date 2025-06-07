@@ -126,7 +126,7 @@ header {
   background: var(--marfil-vital);
 }
 .cotiza {
-  background: var(--beige-natural);
+  background: var(--marfil-vital);
 }
 
 /* Hero */
@@ -280,6 +280,63 @@ blockquote .autor{
   font-weight: bolder;
   border-radius: 0.5rem;
 }
+
+
+/* -----------------------PREGUNTAS FRECUENTES------------------- */
+.faq {
+  background: var(--beige-natural);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.faq h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: var(--font-heading);
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--beige-natural);
+}
+
+.faq-question {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  font-size: 1.1rem;
+  padding: 1rem 0;
+  font-weight: bold;
+  color: var(--gris-humano);
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.faq-question::after {
+  content: "+";
+  float: right;
+  transition: transform 0.3s;
+}
+
+.faq-question[aria-expanded="true"]::after {
+  content: "–";
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+
+.faq-answer p {
+  padding-bottom: 1rem;
+  color: var(--gris-humano);
+}
+
+
+
 
 /* Cotización */
 .cotiza-content {
@@ -526,9 +583,9 @@ footer .footer-nav {
 
 /* === PANTALLAS ULTRA-WIDE (1920px en adelante) === */
 @media (min-width: 1920px) {
-  .section {
-    /* max-width: 1400px; */
-  }
+  /* .section {
+    max-width: 1400px;
+  } */
   
   .hero h1 {
     font-size: 3.5rem;
