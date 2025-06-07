@@ -460,6 +460,36 @@ footer .footer-nav {
   display: none;
 }
 
+/* -----------------BOTÓN DE WHATSAPP------------------ */
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  width: 5rem;
+  height: 5rem;
+  background: #25D366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+
+.whatsapp-button:hover {
+  transform: scale(1.7);
+  bottom: 3rem;
+  right: 3rem;
+}
+
+.whatsapp-button svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  fill: #fff;
+}
+
+/* ------------------------------------------------------------------MEDIA QUERIES---------------------------------------------------- */
 
 /* Mostrar menú hamburguesa en pantallas pequeñas */
 @media (max-width: 600px) {
