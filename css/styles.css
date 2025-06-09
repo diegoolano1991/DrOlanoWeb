@@ -145,6 +145,11 @@ header {
   border-radius: 8px;
   margin-top: 1.5rem;
 }
+
+.hero .container{
+  border-radius: 1.5rem;
+}
+
 .btn {
   display: inline-block;
 }
@@ -274,7 +279,7 @@ header {
   margin-bottom: 1rem;
 }
 
-blockquote .autor{
+blockquote .author{
   padding: 0.8rem;
   margin-top: 1rem;
   font-weight: bolder;
@@ -484,8 +489,8 @@ footer .footer-nav {
 }
 
 .whatsapp-button svg {
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 2.3rem;
+  height: 2.3rem;
   fill: #fff;
 }
 
