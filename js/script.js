@@ -18,8 +18,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Manejar el formulario de cotización
   const cotizaForm = document.querySelector('.cotiza-content form');
   if (cotizaForm) {
+    const nombreField = document.getElementById('nombre-cot');
+    const whatsappField = document.getElementById('whatsapp');
+    const emailField = document.getElementById('email-cot');
+    const consultaField = document.getElementById('consulta');
+
     cotizaForm.addEventListener('submit', (e) => {
       e.preventDefault();
+
+      // limpiar estados de error previos
+      [nombreField, whatsappField, emailField, consultaField].forEach(f => {
+        f.classList.remove('input-error');
+      });
+
+      let valido = true;
+      if (!nombreField.value.trim()) {
+        nombreField.classList.add('input-error');
+        valido = false;
+      }
+      if (!whatsappField.value.trim()) {
+        whatsappField.classList.add('input-error');
+        valido = false;
+      }
+      if (!emailField.value.trim()) {
+        emailField.classList.add('input-error');
+        valido = false;
+      }
+      if (!consultaField.value.trim()) {
+        consultaField.classList.add('input-error');
+        valido = false;
+      }
+
+      if (!valido) {
+        alert('Por favor completa todos los campos requeridos.');
+        return;
+      }
+
       alert('¡Gracias! Hemos recibido tu solicitud de cotización y te contactaremos pronto.');
       cotizaForm.reset();
     });
